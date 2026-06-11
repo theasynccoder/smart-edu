@@ -5,6 +5,7 @@ A comprehensive full-stack educational management platform designed to streamlin
 ## 🎯 Overview
 
 Smart Education Management System is an intelligent platform that helps educational institutions manage:
+
 - **Student Information & Enrollment**
 - **Teacher & Faculty Management**
 - **Time Table & Exam Management**
@@ -34,6 +35,7 @@ Smart Education Management System is an intelligent platform that helps educatio
 ## 🛠️ Tech Stack
 
 ### Backend
+
 - **Node.js** with **Express.js** - REST API server
 - **MongoDB** - NoSQL database
 - **Mongoose** - ODM for MongoDB
@@ -42,6 +44,7 @@ Smart Education Management System is an intelligent platform that helps educatio
 - **Google Generative AI** - AI integration
 
 ### Frontend
+
 - **React 19** - UI library
 - **Vite** - Build tool & dev server
 - **React Router v7** - Client-side routing
@@ -51,6 +54,7 @@ Smart Education Management System is an intelligent platform that helps educatio
 - **Recharts** - Data visualization
 
 ### ChatBot Backend
+
 - **Python** - FastAPI
 - **Google Generative AI** - Natural language processing
 - **MongoDB** - Database queries
@@ -207,6 +211,7 @@ python main.py
 ### Option 1: Vercel (Recommended)
 
 #### Deploy Backend
+
 ```bash
 cd Backendtemplate
 npm install -g vercel
@@ -215,6 +220,7 @@ vercel --prod
 ```
 
 Add environment variables in Vercel Dashboard:
+
 - `MONGODB_URI`
 - `JWT_SECRET`
 - `CLIENT_URL` (your frontend URL)
@@ -225,12 +231,14 @@ Add environment variables in Vercel Dashboard:
 Update `vercel.json` CORS header with your frontend URL.
 
 #### Deploy Frontend
+
 ```bash
 cd ../Frontend
 vercel --prod
 ```
 
 Add environment variables:
+
 - `VITE_BASE_URL` (your Vercel backend URL + `/api/v1`)
 - `VITE_CHATBOT_URL` (your ChatBot URL)
 
@@ -257,12 +265,14 @@ Add environment variables:
 ## ✨ Features
 
 ### Student Management
+
 - Register & authenticate students
 - View student profiles & enrollment
 - Track student attendance
 - View marks & performance
 
 ### Teacher Management
+
 - Register & manage teachers
 - Create lesson plans
 - Mark attendance
@@ -270,22 +280,26 @@ Add environment variables:
 - Send announcements
 
 ### Time Table & Exams
+
 - Create & manage time tables
 - Schedule exams
 - Assign invigilators
 - Track exam marks
 
 ### Attendance
+
 - Daily attendance marking
 - Monthly/semester reports
 - Automated SMS notifications
 
 ### AI Chatbot
+
 - Query student information by name/class/roll number
 - Natural language processing
 - Integrated with MongoDB
 
 ### Notifications
+
 - SMS alerts via Twilio
 - Real-time updates
 - Announcement system
@@ -295,12 +309,14 @@ Add environment variables:
 ## 📡 API Documentation
 
 ### Authentication Endpoints
+
 - `POST /api/v1/users/register` - Register new user
 - `POST /api/v1/users/login` - User login
 - `GET /api/v1/users/getProfile` - Get user profile
 - `POST /api/v1/users/logout` - User logout
 
 ### Student Endpoints
+
 - `GET /api/v1/students` - Get all students
 - `GET /api/v1/students/:id` - Get student by ID
 - `POST /api/v1/students` - Create student
@@ -308,11 +324,13 @@ Add environment variables:
 - `DELETE /api/v1/students/:id` - Delete student
 
 ### Teacher Endpoints
+
 - `GET /api/v1/teachers` - Get all teachers
 - `POST /api/v1/teachers` - Create teacher
 - `PUT /api/v1/teachers/:id` - Update teacher
 
 ### Other Endpoints
+
 - `/api/v1/timetable` - Time table management
 - `/api/v1/subjects` - Subject management
 - `/api/v1/exams` - Exam management
@@ -321,6 +339,7 @@ Add environment variables:
 - `/api/v1/sms` - SMS notifications
 
 ### ChatBot Endpoint
+
 - `POST /query` - Query student information
   ```json
   {
@@ -333,19 +352,23 @@ Add environment variables:
 ## 🔧 Troubleshooting
 
 ### 404 Error on API Calls
+
 - Ensure `VITE_BASE_URL` includes `/api/v1`
 - Example: `https://smart-edu-back.vercel.app/api/v1`
 
 ### CORS Errors
+
 - Update `CORS` config in backend `app.js`
 - Ensure `CLIENT_URL` matches your frontend URL
 - Update `vercel.json` CORS headers for production
 
 ### Mixed Content Issues
+
 - Ensure all URLs use HTTPS in production
 - Update environment variables on deployment platform
 
 ### ChatBot Not Responding
+
 - Ensure ChatBot server is running
 - Check MongoDB connection
 - Verify `VITE_CHATBOT_URL` environment variable

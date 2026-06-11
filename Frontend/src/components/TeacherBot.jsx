@@ -73,6 +73,7 @@ const TeacherBot = () => {
 
     try {
       const response = await axios.post(`${import.meta.env.VITE_CHATBOT_URL}/query`, {
+        query: userText
       });
 
       const students = response.data.results;

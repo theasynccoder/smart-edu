@@ -154,14 +154,10 @@ const LandingPage = () => {
           </div>
           <div className="md:w-1/2 flex justify-center">
             <img 
-              src="http://bangalorenewsnetwork.com/newspics/2018/august/1caa45e1234260b64bf67be8aaeb2568/1caa4_Halasahalli.jpg" 
+              src="https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849825_1280.jpg" 
               alt="School Management System Dashboard" 
               className="rounded-lg shadow-xl object-cover max-w-full h-auto"
               style={{ maxHeight: '400px', width: 'auto' }}
-              onError={(e) => {
-                e.target.onerror = null;
-                e.target.src = "https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849825_1280.jpg";
-              }}
             />
           </div>
         </div>
